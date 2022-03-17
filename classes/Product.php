@@ -17,13 +17,13 @@ class Product {
     }
 
     function SetType($productType) {
-        if($productType == 'giochi' || $productType == 'cibo' || $productType == 'cucce') {
+        if($productType == 'Plays' || $productType == 'PetFood' || $productType == 'Kennels') {
            $this->productType = $productType;
         } else {
            echo " Errore! Seleziona un tipo di prodotto tra quelli possibili";
         }
    
-        if($productType == 'giochi') {
+        if($productType == 'Plays') {
             //i primi tre mesi dell'anno i giochi non sono disponibili
             if ($this->month == '01' || $this->month == '02' || $this->month == '03') {
             $this->price = ($this->price / 20) * 100;
